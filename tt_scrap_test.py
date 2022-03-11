@@ -16,7 +16,7 @@ def code(URL, WEBHOOK, USERNAME, AVATAR_URL, GUID):
     print(DICO['USERNAME'][k])
 
     client = tweepy.Client(bearer_token)
-    query = 'from:DOFUSfr -is:retweet -is:reply'
+    query = f'from:{URL} -is:retweet -is:reply'
     tweets = client.search_recent_tweets(query=query, max_results=10)
     for tweet in tweets.data:
         # Recherche si le GUID du post rss existe dans le fichier
