@@ -3,7 +3,7 @@
 import json
 import os
 
-PATH = "/home/ben/codes/python/tt_scrap/"
+PATH = "./"
 
 #fonction clear console
 def cls():
