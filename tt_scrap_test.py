@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 
-PATH = "/home/ben/codes/python/tt_scrap/"
+PATH = "./"
 
 with open(PATH + "db.json", "r") as json_file:
         DICO = json.load(json_file)
