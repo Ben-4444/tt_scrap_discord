@@ -7,6 +7,7 @@ from pathlib import Path
 
 
 PATH = "./"
+bearer_token = r""
 
 with open(PATH + "db.json", "r") as json_file:
         DICO = json.load(json_file)
@@ -14,7 +15,6 @@ with open(PATH + "db.json", "r") as json_file:
 def code(URL, WEBHOOK, USERNAME, AVATAR_URL, GUID):
     print(DICO['USERNAME'][k])
 
-    bearer_token = r""
     client = tweepy.Client(bearer_token)
     query = 'from:DOFUSfr -is:retweet -is:reply'
     tweets = client.search_recent_tweets(query=query, max_results=10)
